@@ -1,27 +1,18 @@
-import 'dart:io';
+import 'package:transport/src/blocs/auth_bloc.dart';
 import 'package:transport/src/resource/home_page.dart';
-
-import 'package:transport/src/screen/home1.dart';
-
-import 'package:transport/src/screen/home_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:transport/src/resource/login_page.dart';
-import 'package:transport/src/resource/register_page.dart';
-import 'package:transport/src/screen/itemif.dart';
-import 'package:transport/src/widgets/bottomnavi.dart';
-import 'package:transport/src/widgets/contain_item.dart';
-import 'package:transport/src/widgets/item3.dart';
-import 'package:transport/src/widgets/item4.dart';
-import 'package:transport/src/widgets/item5.dart';
 
-import 'package:transport/src/widgets/widget_item.dart';
+class MyApp extends InheritedWidget {
+  final AuthBloc authBloc;
+  final Widget child;
+  MyApp(this.authBloc, this.child) : super(child: child);
 
-class MyApp extends StatelessWidget {
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: HomeLogin(),
-    );
+  bool updateShouldNotify(InheritedWidget oldWidget) {
+    return false;
+  }
+
+  static MyApp of(BuildContext context) {
+    return context.inheritFromWidgetOfExactType(MyApp);
   }
 }

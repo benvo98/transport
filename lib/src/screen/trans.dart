@@ -7,7 +7,7 @@ class Trans extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.deepPurple,
+        backgroundColor: Colors.red.withOpacity(.8),
         elevation: 0.0,
         title: Padding(
           padding: const EdgeInsets.only(left: 75),
@@ -46,7 +46,7 @@ class Trans extends StatelessWidget {
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 25,
-                    color: Colors.deepPurple),
+                    color: Colors.red.withOpacity(.8)),
               ),
             ),
             Wrap(

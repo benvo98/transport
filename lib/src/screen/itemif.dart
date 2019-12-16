@@ -63,7 +63,7 @@ class ItemIF extends StatelessWidget {
                                 style: TextStyle(
                                     color: Colors.black12, fontSize: 15),
                               ),
-                              Text('Phuong')
+                              Text('Anh')
                             ],
                           ),
                         ),
@@ -82,7 +82,7 @@ class ItemIF extends StatelessWidget {
                                 style: TextStyle(
                                     color: Colors.black12, fontSize: 15),
                               ),
-                              Text('Lys')
+                              Text('Vo')
                             ],
                           ),
                         ),
@@ -101,7 +101,7 @@ class ItemIF extends StatelessWidget {
                                 style: TextStyle(
                                     color: Colors.black12, fontSize: 15),
                               ),
-                              Text('laelys@email.com  ')
+                              Text('anhvo@email.com  ')
                             ],
                           ),
                         ),
@@ -161,8 +161,7 @@ class ItemIF extends StatelessWidget {
                               BorderRadius.all(Radius.circular(100.0)),
                           shape: BoxShape.rectangle,
                           image: DecorationImage(
-                              image: AssetImage('love.jpg'),
-                              fit: BoxFit.cover)),
+                              image: AssetImage('tui.jpg'), fit: BoxFit.cover)),
                     ),
                   ],
                 ),

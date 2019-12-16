@@ -10,7 +10,7 @@ class MenuPF extends StatelessWidget {
         child: Column(
           children: <Widget>[
             Container(
-                color: Colors.redAccent.withOpacity(.8),
+                color: Colors.red.withOpacity(.8),
                 child: Stack(
                   children: <Widget>[
                     Container(
@@ -28,7 +28,7 @@ class MenuPF extends StatelessWidget {
                                     BorderRadius.all(Radius.circular(100.0)),
                                 shape: BoxShape.rectangle,
                                 image: DecorationImage(
-                                    image: AssetImage('love.jpg'),
+                                    image: AssetImage('tui.jpg'),
                                     fit: BoxFit.cover)),
                           ),
                           Padding(
@@ -36,7 +36,7 @@ class MenuPF extends StatelessWidget {
                             child: Column(
                               children: <Widget>[
                                 Text(
-                                  'Vợ Tui ♥',
+                                  'Võ Nhị Anh',
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 20,

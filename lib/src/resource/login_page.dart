@@ -1,14 +1,13 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:transport/model/slide.dart';
-import 'package:transport/src/screen/home1.dart';
-import 'package:transport/src/screen/itemif.dart';
+import 'package:transport/src/dialog/msg_dialog.dart';
 import 'package:transport/src/widgets/bottomnavi.dart';
 import 'package:transport/src/widgets/slide_dots.dart';
 import 'package:transport/src/widgets/slide_item.dart';
 import 'package:transport/src/resource/register_page.dart';
-import 'package:transport/src/screen/home_screen.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -16,6 +15,8 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  TextEditingController _emailController = TextEditingController();
+  TextEditingController _passwordController = TextEditingController();
   bool _showPass = false;
   int _currentPage = 0;
   final PageController _pageController = PageController(initialPage: 0);
@@ -125,16 +126,7 @@ class _LoginPageState extends State<LoginPage> {
                       borderRadius: BorderRadius.circular(25.0),
                       borderSide: BorderSide(),
                     ),
-                    //TextStyle(color: Color(0Xff888888), fontSize: 15,fontWeight: FontWeight.bold,)),
                   ),
-                  /*validator: (val) {
-                    if (val.length == 0) {
-                      return "Username cannot be empty";
-                    } else {
-                      return null;
-                    }
-                  },
-                  keyboardType: TextInputType.text,*/
                 ),
               ),
               Padding(
@@ -189,44 +181,6 @@ class _LoginPageState extends State<LoginPage> {
                       )),
                 ),
               ),
-              /*Padding(
-                padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-                child: Container(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-                      SizedBox(
-                        width: 180,
-                        height: 40,
-                        child: RaisedButton(
-                            color: Colors.white70,
-                            shape: RoundedRectangleBorder(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(8))),
-                            onPressed: onClicked,
-                            child: Text(
-                              "FACEBOOK",
-                              style: TextStyle(color: Colors.indigo),
-                            )),
-                      ),
-                      SizedBox(
-                        width: 180,
-                        height: 40,
-                        child: RaisedButton(
-                            color: Colors.white70,
-                            shape: RoundedRectangleBorder(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(8))),
-                            onPressed: onClicked,
-                            child: Text(
-                              "GOOGLE",
-                              style: TextStyle(color: Colors.red[600]),
-                            )),
-                      ),
-                    ],
-                  ),
-                ),
-              ),*/
               Padding(
                   padding: const EdgeInsets.fromLTRB(60, 0, 0, 0),
                   child: Container(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:transport/src/screen/infortrans.dart';
 
 class ItemListSP extends StatelessWidget {
   final String imageUrl;
@@ -83,8 +84,14 @@ class ItemListSP extends StatelessWidget {
                                     margin: EdgeInsets.only(left: 125),
                                     width: 100,
                                     child: RaisedButton(
-                                      onPressed: _onclicked,
-                                      color: Colors.deepPurple,
+                                      onPressed: () {
+                                        Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    DetailScreen()));
+                                      },
+                                      color: Colors.red,
                                       shape: RoundedRectangleBorder(
                                           borderRadius:
                                               BorderRadius.circular(25.0)),
@@ -111,6 +118,4 @@ class ItemListSP extends StatelessWidget {
       ),
     );
   }
-
-  void _onclicked() {}
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:transport/src/resource/login_page.dart';
+import 'package:transport/src/resource/login_page1.dart';
 
 class HomeLogin extends StatefulWidget {
   @override
@@ -16,7 +17,7 @@ class _HomeLoginState extends State<HomeLogin> {
             gradient: LinearGradient(
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
-                colors: [Colors.blue, Colors.purple])),
+                colors: [Colors.yellow, Colors.red])),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: <Widget>[
@@ -49,13 +50,13 @@ class _HomeLoginState extends State<HomeLogin> {
                 height: 45,
                 child: RaisedButton(
                     onPressed: onClicked,
-                    color: Colors.white70,
+                    color: Colors.white.withOpacity(.7),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(30)),
                     child: Text(
                       "Log In",
                       style: TextStyle(
-                          color: Colors.deepPurple,
+                          color: Colors.red.withOpacity(.7),
                           fontSize: 15,
                           fontWeight: FontWeight.bold),
                     )),
@@ -74,10 +75,7 @@ class _HomeLoginState extends State<HomeLogin> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      Container(
-                        width: 50,
-                        child: Image.asset('icfb.png'),
-                      ),
+                      Container(width: 50, child: Image.asset('icfb.png')),
                       Text(
                         "Connect with facebook",
                         style: TextStyle(
@@ -105,7 +103,7 @@ class _HomeLoginState extends State<HomeLogin> {
                     children: <Widget>[
                       Container(
                         width: 35,
-                        child: Image.asset('icgg.png'),
+                        child: Image.asset('ggg.png'),
                       ),
                       Text(
                         "  Connect with Google",
@@ -127,7 +125,7 @@ class _HomeLoginState extends State<HomeLogin> {
 
   void onClicked() {
     Navigator.push(
-        context, MaterialPageRoute(builder: (context) => LoginPage()));
+        context, MaterialPageRoute(builder: (context) => LoginPage1()));
   }
 
   void onClicked1() {}

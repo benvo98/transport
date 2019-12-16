@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:transport/src/map/home.dart';
 import 'package:transport/src/screen/home1.dart';
 import 'package:transport/src/screen/itemif.dart';
 import 'package:transport/src/screen/menu.dart';
@@ -12,7 +13,13 @@ class Itembottom extends StatefulWidget {
 class _ItembottomState extends State<Itembottom> {
   int _index = 0;
 
-  List<Widget> listScreen = [Home1(), Trans(), Home1(), ItemIF(), MenuPF()];
+  List<Widget> listScreen = [
+    Home1(),
+    Trans(),
+    MyHomePage(),
+    ItemIF(),
+    MenuPF()
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,35 +37,35 @@ class _ItembottomState extends State<Itembottom> {
           BottomNavigationBarItem(
             icon: Icon(
               Icons.home,
-              color: _index == 0 ? Colors.deepPurple : Colors.grey,
+              color: _index == 0 ? Colors.red : Colors.grey,
             ),
-            title: Text("Home"),
+            title: Text(""),
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.transfer_within_a_station,
-              color: _index == 1 ? Colors.deepPurple : Colors.grey,
+              color: _index == 1 ? Colors.red : Colors.grey,
             ),
             title: Text(""),
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.map,
-              color: _index == 2 ? Colors.deepPurple : Colors.grey,
+              color: _index == 2 ? Colors.red : Colors.grey,
             ),
             title: Text(""),
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.person_outline,
-              color: _index == 3 ? Colors.deepPurple : Colors.grey,
+              color: _index == 3 ? Colors.red : Colors.grey,
             ),
             title: Text(""),
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.menu,
-              color: _index == 4 ? Colors.deepPurple : Colors.grey,
+              color: _index == 4 ? Colors.red : Colors.grey,
             ),
             title: Text(""),
           ),
