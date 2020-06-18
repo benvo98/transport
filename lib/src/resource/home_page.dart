@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:transport/src/resource/login_page.dart';
 import 'package:transport/src/resource/login_page1.dart';
 
 class HomeLogin extends StatefulWidget {

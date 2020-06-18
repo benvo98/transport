@@ -19,8 +19,8 @@ class Trans extends StatelessWidget {
         ),
         leading: IconButton(
           padding: EdgeInsets.only(left: 30.0),
-          onPressed: () => print('Menu'),
-          icon: Icon(Icons.menu),
+          onPressed: () => print('Filter'),
+          icon: Icon(Icons.filter_list),
           iconSize: 30.0,
           color: Colors.white,
         ),

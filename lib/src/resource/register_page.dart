@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:transport/src/blocs/auth_bloc.dart';
 import 'package:transport/src/dialog/loading_dialog.dart';
 import 'package:transport/src/dialog/msg_dialog.dart';
-import 'package:transport/src/resource/login_page.dart';
+
+import 'package:transport/src/resource/login_page1.dart';
 import 'package:transport/src/screen/home1.dart';
 import 'package:transport/src/widgets/bottomnavi.dart';
 import 'package:transport/src/screen/home_screen.dart';
@@ -208,7 +209,7 @@ class _RegisterPageState extends State<RegisterPage> {
           _phoneController.text, _nameController.text, () {
         LoadingDialog.hideLoadingDialog(context);
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => LoginPage()));
+            context, MaterialPageRoute(builder: (context) => LoginPage1()));
       }, (msg) {
         LoadingDialog.hideLoadingDialog(context);
         MsgDialog.showMsgDialog(context, "Sign -In", msg);

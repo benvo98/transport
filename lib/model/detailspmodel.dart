@@ -1,11 +1,11 @@
 class IFModel {
-  String imageUrl;
-  String name;
-  String tenchuxe;
-  String noio;
-  String sdt;
-  String loai;
-  String trongluong;
+  final String imageUrl;
+  final String name;
+  final String tenchuxe;
+  final String noio;
+  final String sdt;
+  final String loai;
+  final String trongluong;
   IFModel(
       {this.imageUrl,
       this.name,

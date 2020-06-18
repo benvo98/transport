@@ -1,30 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class DetailScreen extends StatefulWidget {
-  @override
-  _DetailScreenState createState() => _DetailScreenState();
-}
-
-class IFModel {
-  String imageUrl;
-  String name;
-  String tenchuxe;
-  String noio;
-  String sdt;
-  String loai;
-  String trongluong;
-  IFModel(
-      {this.imageUrl,
-      this.name,
-      this.tenchuxe,
-      this.noio,
-      this.sdt,
-      this.loai,
-      this.trongluong});
-}
-
-class _DetailScreenState extends State<DetailScreen> {
+class DetailScreen extends StatelessWidget {
   void customLaunch(command) async {
     if (await canLaunch(command)) {
       await launch(command);
@@ -33,6 +10,21 @@ class _DetailScreenState extends State<DetailScreen> {
     }
   }
 
+  final String imageUrl;
+  final String name;
+  final String tenchuxe;
+  final String noio;
+  final String sdt;
+  final String loai;
+  final String trongluong;
+  DetailScreen(
+      {this.imageUrl,
+      this.name,
+      this.tenchuxe,
+      this.noio,
+      this.sdt,
+      this.loai,
+      this.trongluong});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,7 +51,9 @@ class _DetailScreenState extends State<DetailScreen> {
             child: GridTile(
               child: Container(
                 color: Colors.white,
-                child: Image.asset("xe04.jpg"),
+                child: Image(
+                  image: AssetImage("xe04.jpg"),
+                ),
               ),
               footer: Container(
                 height: 70,
@@ -67,7 +61,7 @@ class _DetailScreenState extends State<DetailScreen> {
                 alignment: Alignment.center,
                 color: Colors.black.withOpacity(.5),
                 child: Text(
-                  'Xe chở hàng N.A',
+                  "Xe Chở Hàng N.A",
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 25,
@@ -216,7 +210,7 @@ class _DetailScreenState extends State<DetailScreen> {
                         'Tên chủ xe:',
                         style: TextStyle(fontSize: 15),
                       ),
-                      Text(' Nhị Anh', style: TextStyle(fontSize: 15))
+                      Text("Nhị Anh", style: TextStyle(fontSize: 15))
                     ],
                   ),
                 ),
@@ -225,7 +219,7 @@ class _DetailScreenState extends State<DetailScreen> {
                   child: Row(
                     children: <Widget>[
                       Text('Nơi ở:', style: TextStyle(fontSize: 15)),
-                      Text(' Quan 9', style: TextStyle(fontSize: 15))
+                      Text('Quận 9', style: TextStyle(fontSize: 15))
                     ],
                   ),
                 ),
@@ -234,7 +228,7 @@ class _DetailScreenState extends State<DetailScreen> {
                   child: Row(
                     children: <Widget>[
                       Text('Số điện thoại:', style: TextStyle(fontSize: 15)),
-                      Text(' 0948819199', style: TextStyle(fontSize: 15))
+                      Text("0948819199", style: TextStyle(fontSize: 15))
                     ],
                   ),
                 ),
@@ -243,7 +237,7 @@ class _DetailScreenState extends State<DetailScreen> {
                   child: Row(
                     children: <Widget>[
                       Text('Loại xe:', style: TextStyle(fontSize: 15)),
-                      Text(' Xe Cở lớn', style: TextStyle(fontSize: 15))
+                      Text("Xe cở lớn", style: TextStyle(fontSize: 15))
                     ],
                   ),
                 ),
@@ -252,7 +246,7 @@ class _DetailScreenState extends State<DetailScreen> {
                   child: Row(
                     children: <Widget>[
                       Text('Trọng lượng xe:', style: TextStyle(fontSize: 15)),
-                      Text(' 10kg', style: TextStyle(fontSize: 15))
+                      Text("10kg", style: TextStyle(fontSize: 15))
                     ],
                   ),
                 ),

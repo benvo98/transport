@@ -41,7 +41,7 @@ class ItemPFUser extends StatelessWidget {
                           child: Column(
                             children: <Widget>[
                               Text(
-                                'Vợ Tui ♥',
+                                'Khách 01',
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold, fontSize: 20),
                               ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:transport/model/detailspmodel.dart';
 import 'package:transport/src/screen/infortrans.dart';
 
 class ItemListSP extends StatelessWidget {
